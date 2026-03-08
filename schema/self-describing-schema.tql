@@ -1,7 +1,7 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
 # upstream-tag: v1.0.0
-# upstream-commit: 1a00ddec256cf993113f93fcd1f9354c76f090da
+# upstream-commit: d2d06ba36d1c9b76588e4177b1407580f02a6b1f
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql

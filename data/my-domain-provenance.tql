@@ -1,7 +1,7 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
 # upstream-tag: v1.0.0
-# upstream-commit: db9ab3d15b21db6873822987766ed056255e8582
+# upstream-commit: d2d06ba36d1c9b76588e4177b1407580f02a6b1f
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
@@ -11,20 +11,20 @@
 insert
 
 $build isa OntologyPackageBuild,
-  has buildKey "my-domain@1.0.0:db9ab3d15b21db6873822987766ed056255e8582",
+  has buildKey "my-domain@1.0.0:d2d06ba36d1c9b76588e4177b1407580f02a6b1f",
   has packageName "my-domain",
   has packageVersion "1.0.0",
   has upstreamRepoUrl "https://github.com/your-org/ontology-my-domain",
   has upstreamTag "v1.0.0",
-  has upstreamCommit "db9ab3d15b21db6873822987766ed056255e8582",
+  has upstreamCommit "d2d06ba36d1c9b76588e4177b1407580f02a6b1f",
   has manifestPath "manifests/my-domain-v1.0.0.package-manifest.json",
   has generatorName "hand-authored-package-bootstrap",
   has generatorVersion "0.1.0",
-  has generatedAt "2026-03-08T01:08:07Z";
+  has generatedAt "2026-03-08T15:44:13Z";
 
 $s1 isa SourceArtifactRecord,
   has sourcePath "package.json",
-  has sourceSha256 "f3cbff553a75ca9bee3327970076fa272edc13f3b33db7d39d7d104bfb05a0aa";
+  has sourceSha256 "6d51efa100b6aeec278f9d0d5459df806ce20b229119561eb407e1d9cb27eeb2";
 (build: $build, sourceArtifact: $s1) isa buildHasSourceArtifact;
 
 $s2 isa SourceArtifactRecord,
@@ -35,19 +35,19 @@ $s2 isa SourceArtifactRecord,
 $g1 isa GeneratedArtifactRecord,
   has artifactPath "schema/self-describing-schema.tql",
   has artifactKind "meta-schema",
-  has artifactSha256 "7cb2e95a36dc8998913dbce3755c7bf66b7614058b79fb119db44dd0246335f0";
+  has artifactSha256 "ac2abf8cc13d9b69e0dbf1400ae6107f4876b9540f4af898117cee345a569396";
 (build: $build, generatedArtifact: $g1) isa buildHasGeneratedArtifact;
 
 $g2 isa GeneratedArtifactRecord,
   has artifactPath "schema/package-provenance.tql",
   has artifactKind "provenance-schema",
-  has artifactSha256 "acba484bdbd2505ef9b5e25c0e86c087d3b3b21a151718cb139dd4dd6ee7b64c";
+  has artifactSha256 "a1135178d4fe1db8f71ac5f69cc2c8469c4744ce0fc340c47155c7a8f24295d5";
 (build: $build, generatedArtifact: $g2) isa buildHasGeneratedArtifact;
 
 $g3 isa GeneratedArtifactRecord,
   has artifactPath "data/my-domain-schema-docs.tql",
   has artifactKind "documentation",
-  has artifactSha256 "7770ed569a5227277ef6cd30b5a4dae71e258d562d63d6567f298000a0a6c548";
+  has artifactSha256 "b9977a24c93765d029062c18255d1f93cbed3602cf301775340d3bfbd9324823";
 (build: $build, generatedArtifact: $g3) isa buildHasGeneratedArtifact;
 
 $g4 isa GeneratedArtifactRecord,
