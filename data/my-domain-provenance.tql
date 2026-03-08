@@ -1,7 +1,7 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
 # upstream-tag: v1.0.0
-# upstream-commit: 1a00ddec256cf993113f93fcd1f9354c76f090da
+# upstream-commit: db9ab3d15b21db6873822987766ed056255e8582
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
@@ -11,25 +11,25 @@
 insert
 
 $build isa OntologyPackageBuild,
-  has buildKey "my-domain@1.0.0:1a00ddec256cf993113f93fcd1f9354c76f090da",
+  has buildKey "my-domain@1.0.0:db9ab3d15b21db6873822987766ed056255e8582",
   has packageName "my-domain",
   has packageVersion "1.0.0",
   has upstreamRepoUrl "https://github.com/your-org/ontology-my-domain",
   has upstreamTag "v1.0.0",
-  has upstreamCommit "1a00ddec256cf993113f93fcd1f9354c76f090da",
+  has upstreamCommit "db9ab3d15b21db6873822987766ed056255e8582",
   has manifestPath "manifests/my-domain-v1.0.0.package-manifest.json",
   has generatorName "hand-authored-package-bootstrap",
   has generatorVersion "0.1.0",
-  has generatedAt "2026-03-08T01:01:41Z";
+  has generatedAt "2026-03-08T01:08:07Z";
 
 $s1 isa SourceArtifactRecord,
   has sourcePath "package.json",
-  has sourceSha256 "b23bccaf3328b5104024340484063ce4a89332df7ac33fa3498cf40f25930bc0";
+  has sourceSha256 "f3cbff553a75ca9bee3327970076fa272edc13f3b33db7d39d7d104bfb05a0aa";
 (build: $build, sourceArtifact: $s1) isa buildHasSourceArtifact;
 
 $s2 isa SourceArtifactRecord,
   has sourcePath "schema/myDomain.tql",
-  has sourceSha256 "2c0e98044be140a49773f9c57d2fe9a039a5c9ab9b4434bdad0f2f8b6e8eafa4";
+  has sourceSha256 "133f4792da4b6cdc375cfcc95fe8bebb3ff25e36b4712a0c2ee6ea603364f462";
 (build: $build, sourceArtifact: $s2) isa buildHasSourceArtifact;
 
 $g1 isa GeneratedArtifactRecord,
