@@ -1,5 +1,0 @@
-insert
-
-$dom isa Domain,
-  has name "mydomain",
-  has description "Description of your domain.";

@@ -8,14 +8,62 @@
   "source": "https://github.com/your-org/ontology-my-domain",
   "prefix": "mydomain",
   "schemas": [
-    { "name": "myDomain", "file": "schema/myDomain.tql" }
+    {
+      "name": "self-describing-schema",
+      "file": "schema/self-describing-schema.tql"
+    },
+    {
+      "name": "package-provenance",
+      "file": "schema/package-provenance.tql"
+    },
+    {
+      "name": "myDomain",
+      "file": "schema/myDomain.tql"
+    }
   ],
   "data": [
-    "data/myDomain-typedoc.tql"
+    "data/my-domain-provenance.tql",
+    "data/my-domain-schema-docs.tql"
   ],
-  "domains": "data/domains.tql",
-  "categorization": "data/categorize.tql",
   "dependencies": [
-    { "name": "gist", "version": ">=14.0.0" }
-  ]
+    {
+      "name": "gist",
+      "version": ">=14.0.0"
+    }
+  ],
+  "scripts": {
+    "validate:bootstrap": "node tools/package_contract/validate_bootstrap.mjs"
+  },
+  "manifests": [
+    "manifests/my-domain-v1.0.0.package-manifest.json"
+  ],
+  "assembly": {
+    "loadOrder": [
+      "schema/self-describing-schema.tql",
+      "schema/package-provenance.tql",
+      "schema/myDomain.tql",
+      "data/my-domain-provenance.tql",
+      "data/my-domain-schema-docs.tql"
+    ],
+    "generatedArtifacts": [
+      "schema/self-describing-schema.tql",
+      "schema/package-provenance.tql",
+      "data/my-domain-schema-docs.tql",
+      "data/my-domain-provenance.tql",
+      "manifests/package-manifest.schema.json",
+      "manifests/my-domain-v1.0.0.package-manifest.json"
+    ]
+  },
+  "provenance": {
+    "manifest": "manifests/my-domain-v1.0.0.package-manifest.json",
+    "status": "bootstrap"
+  },
+  "legacyDocumentation": {
+    "deprecatedFiles": [
+      "data/myDomain-typedoc.tql",
+      "data/domains.tql",
+      "data/categorize.tql"
+    ],
+    "status": "superseded-by-schema-resource"
+  }
 }
