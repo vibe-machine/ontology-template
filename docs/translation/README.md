@@ -13,7 +13,7 @@ Current status:
 
 - `data/my-domain-schema-docs.tql` is the authoritative documentation path for package-local schema resources.
 - `data/my-domain-provenance.tql` records the package build, source artifacts, and generated artifact checksums.
-- `manifests/my-domain-v1.0.0.package-manifest.json` is the filesystem source of truth for the package contract.
+- `manifests/my-domain-v1.0.1.package-manifest.json` is the filesystem source of truth for the package contract.
 - Legacy TypeDoc files are retired and are no longer part of active package assembly.
 
 Design references:

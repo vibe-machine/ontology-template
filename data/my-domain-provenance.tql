@@ -1,57 +1,56 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
-# upstream-tag: v1.0.0
-# upstream-commit: d2d06ba36d1c9b76588e4177b1407580f02a6b1f
+# upstream-tag: v1.0.1
+# upstream-commit: b4953fdfaf727a9a5ad299d540381d93896d9011
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
-# manifest: manifests/my-domain-v1.0.0.package-manifest.json
+# manifest: manifests/my-domain-v1.0.1.package-manifest.json
 # generator: hand-authored-package-bootstrap/0.1.0
 
-insert
 
-$build isa OntologyPackageBuild,
-  has buildKey "my-domain@1.0.0:d2d06ba36d1c9b76588e4177b1407580f02a6b1f",
+put $build isa OntologyPackageBuild,
+  has buildKey "my-domain@1.0.1:b4953fdfaf727a9a5ad299d540381d93896d9011",
   has packageName "my-domain",
-  has packageVersion "1.0.0",
+  has packageVersion "1.0.1",
   has upstreamRepoUrl "https://github.com/your-org/ontology-my-domain",
-  has upstreamTag "v1.0.0",
-  has upstreamCommit "d2d06ba36d1c9b76588e4177b1407580f02a6b1f",
-  has manifestPath "manifests/my-domain-v1.0.0.package-manifest.json",
+  has upstreamTag "v1.0.1",
+  has upstreamCommit "b4953fdfaf727a9a5ad299d540381d93896d9011",
+  has manifestPath "manifests/my-domain-v1.0.1.package-manifest.json",
   has generatorName "hand-authored-package-bootstrap",
   has generatorVersion "0.1.0",
-  has generatedAt "2026-03-08T15:44:13Z";
+  has generatedAt "2026-03-11T02:26:08Z";
 
-$s1 isa SourceArtifactRecord,
+put $s1 isa SourceArtifactRecord,
   has sourcePath "package.json",
-  has sourceSha256 "6d51efa100b6aeec278f9d0d5459df806ce20b229119561eb407e1d9cb27eeb2";
-(build: $build, sourceArtifact: $s1) isa buildHasSourceArtifact;
+  has sourceSha256 "629867bf365c8a72d3d41163d557ce72b1f74d708aa5cef016b03922627745b2";
+put (build: $build, sourceArtifact: $s1) isa buildHasSourceArtifact;
 
-$s2 isa SourceArtifactRecord,
+put $s2 isa SourceArtifactRecord,
   has sourcePath "schema/myDomain.tql",
   has sourceSha256 "133f4792da4b6cdc375cfcc95fe8bebb3ff25e36b4712a0c2ee6ea603364f462";
-(build: $build, sourceArtifact: $s2) isa buildHasSourceArtifact;
+put (build: $build, sourceArtifact: $s2) isa buildHasSourceArtifact;
 
-$g1 isa GeneratedArtifactRecord,
+put $g1 isa GeneratedArtifactRecord,
   has artifactPath "schema/self-describing-schema.tql",
   has artifactKind "meta-schema",
-  has artifactSha256 "ac2abf8cc13d9b69e0dbf1400ae6107f4876b9540f4af898117cee345a569396";
-(build: $build, generatedArtifact: $g1) isa buildHasGeneratedArtifact;
+  has artifactSha256 "e619b275bc2ace6240ad8c6f98691577ceec59c05d29ac07861862f6313a0d72";
+put (build: $build, generatedArtifact: $g1) isa buildHasGeneratedArtifact;
 
-$g2 isa GeneratedArtifactRecord,
+put $g2 isa GeneratedArtifactRecord,
   has artifactPath "schema/package-provenance.tql",
   has artifactKind "provenance-schema",
-  has artifactSha256 "a1135178d4fe1db8f71ac5f69cc2c8469c4744ce0fc340c47155c7a8f24295d5";
-(build: $build, generatedArtifact: $g2) isa buildHasGeneratedArtifact;
+  has artifactSha256 "7806ea654bbc80c142d8075d9d2fa787175767fa79f587319caf0c3c580b56c0";
+put (build: $build, generatedArtifact: $g2) isa buildHasGeneratedArtifact;
 
-$g3 isa GeneratedArtifactRecord,
+put $g3 isa GeneratedArtifactRecord,
   has artifactPath "data/my-domain-schema-docs.tql",
   has artifactKind "documentation",
-  has artifactSha256 "b9977a24c93765d029062c18255d1f93cbed3602cf301775340d3bfbd9324823";
-(build: $build, generatedArtifact: $g3) isa buildHasGeneratedArtifact;
+  has artifactSha256 "d5a4b80149150d156450348533fee92707667c5b7cf2c2b0d9ed6b0e2260bc39";
+put (build: $build, generatedArtifact: $g3) isa buildHasGeneratedArtifact;
 
-$g4 isa GeneratedArtifactRecord,
+put $g4 isa GeneratedArtifactRecord,
   has artifactPath "manifests/package-manifest.schema.json",
   has artifactKind "manifest-schema",
   has artifactSha256 "07599fe20623f3304bec0987320050f12efc1faf04fad7c12176ffe88e0b6a48";
-(build: $build, generatedArtifact: $g4) isa buildHasGeneratedArtifact;
+put (build: $build, generatedArtifact: $g4) isa buildHasGeneratedArtifact;

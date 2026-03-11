@@ -1,11 +1,11 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
-# upstream-tag: v1.0.0
-# upstream-commit: d2d06ba36d1c9b76588e4177b1407580f02a6b1f
+# upstream-tag: v1.0.1
+# upstream-commit: b4953fdfaf727a9a5ad299d540381d93896d9011
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
-# manifest: manifests/my-domain-v1.0.0.package-manifest.json
+# manifest: manifests/my-domain-v1.0.1.package-manifest.json
 # generator: hand-authored-package-bootstrap/0.1.0
 define
 

@@ -3,16 +3,16 @@
   "manifestVersion": "1.0.0",
   "package": {
     "name": "my-domain",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "upstream": {
     "repoUrl": "https://github.com/your-org/ontology-my-domain",
-    "tag": "v1.0.0",
-    "commit": "d2d06ba36d1c9b76588e4177b1407580f02a6b1f",
+    "tag": "v1.0.1",
+    "commit": "b4953fdfaf727a9a5ad299d540381d93896d9011",
     "sourceArtifacts": [
       {
         "path": "package.json",
-        "sha256": "6d51efa100b6aeec278f9d0d5459df806ce20b229119561eb407e1d9cb27eeb2"
+        "sha256": "629867bf365c8a72d3d41163d557ce72b1f74d708aa5cef016b03922627745b2"
       },
       {
         "path": "schema/myDomain.tql",
@@ -23,23 +23,23 @@
   "generator": {
     "name": "hand-authored-package-bootstrap",
     "version": "0.1.0",
-    "generatedAt": "2026-03-08T15:44:13Z"
+    "generatedAt": "2026-03-11T02:26:08Z"
   },
   "artifacts": [
     {
       "kind": "meta-schema",
       "path": "schema/self-describing-schema.tql",
-      "sha256": "ac2abf8cc13d9b69e0dbf1400ae6107f4876b9540f4af898117cee345a569396"
+      "sha256": "e619b275bc2ace6240ad8c6f98691577ceec59c05d29ac07861862f6313a0d72"
     },
     {
       "kind": "provenance-schema",
       "path": "schema/package-provenance.tql",
-      "sha256": "a1135178d4fe1db8f71ac5f69cc2c8469c4744ce0fc340c47155c7a8f24295d5"
+      "sha256": "7806ea654bbc80c142d8075d9d2fa787175767fa79f587319caf0c3c580b56c0"
     },
     {
       "kind": "documentation",
       "path": "data/my-domain-schema-docs.tql",
-      "sha256": "b9977a24c93765d029062c18255d1f93cbed3602cf301775340d3bfbd9324823"
+      "sha256": "d5a4b80149150d156450348533fee92707667c5b7cf2c2b0d9ed6b0e2260bc39"
     },
     {
       "kind": "manifest-schema",
@@ -49,7 +49,7 @@
     {
       "kind": "provenance-seeds",
       "path": "data/my-domain-provenance.tql",
-      "sha256": "76cf51135eac952a5c37d4593cdaf3906c68db59528b7429f7796a2b94a6bcca"
+      "sha256": "504f4692d46c537e2ed92ac41f7f5b73156257c6c92370aacffe234e46017f10"
     }
   ]
 }

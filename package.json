@@ -1,7 +1,7 @@
 {
   "name": "my-domain",
   "displayName": "My Domain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Description of your ontology domain.",
   "author": "your-name",
   "license": "MIT",
@@ -40,7 +40,7 @@
     "release:check": "../ontology-tooling/bin/ontology-release --repo . --validate-only"
   },
   "manifests": [
-    "manifests/my-domain-v1.0.0.package-manifest.json"
+    "manifests/my-domain-v1.0.1.package-manifest.json"
   ],
   "assembly": {
     "loadOrder": [
@@ -56,11 +56,11 @@
       "data/my-domain-schema-docs.tql",
       "data/my-domain-provenance.tql",
       "manifests/package-manifest.schema.json",
-      "manifests/my-domain-v1.0.0.package-manifest.json"
+      "manifests/my-domain-v1.0.1.package-manifest.json"
     ]
   },
   "provenance": {
-    "manifest": "manifests/my-domain-v1.0.0.package-manifest.json",
+    "manifest": "manifests/my-domain-v1.0.1.package-manifest.json",
     "status": "bootstrap"
   },
   "legacyDocumentation": {
