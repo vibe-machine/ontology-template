@@ -1,7 +1,7 @@
 {
   "name": "my-domain",
   "displayName": "My Domain",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Description of your ontology domain.",
   "author": "your-name",
   "license": "MIT",
@@ -17,6 +17,10 @@
       "file": "schema/package-provenance.tql"
     },
     {
+      "name": "administrative-operations",
+      "file": "schema/administrative-operations.tql"
+    },
+    {
       "name": "myDomain",
       "file": "schema/myDomain.tql"
     }
@@ -28,7 +32,7 @@
   "dependencies": [
     {
       "name": "gist",
-      "version": ">=1.0.0"
+      "version": ">=2.0.0"
     }
   ],
   "scripts": {
@@ -40,12 +44,13 @@
     "release:check": "../ontology-tooling/bin/ontology-release --repo . --validate-only"
   },
   "manifests": [
-    "manifests/my-domain-v1.0.1.package-manifest.json"
+    "manifests/my-domain-v2.0.0.package-manifest.json"
   ],
   "assembly": {
     "loadOrder": [
       "schema/self-describing-schema.tql",
       "schema/package-provenance.tql",
+      "schema/administrative-operations.tql",
       "schema/myDomain.tql",
       "data/my-domain-provenance.tql",
       "data/my-domain-schema-docs.tql"
@@ -53,14 +58,15 @@
     "generatedArtifacts": [
       "schema/self-describing-schema.tql",
       "schema/package-provenance.tql",
+      "schema/administrative-operations.tql",
       "data/my-domain-schema-docs.tql",
       "data/my-domain-provenance.tql",
       "manifests/package-manifest.schema.json",
-      "manifests/my-domain-v1.0.1.package-manifest.json"
+      "manifests/my-domain-v2.0.0.package-manifest.json"
     ]
   },
   "provenance": {
-    "manifest": "manifests/my-domain-v1.0.1.package-manifest.json",
+    "manifest": "manifests/my-domain-v2.0.0.package-manifest.json",
     "status": "bootstrap"
   },
   "legacyDocumentation": {

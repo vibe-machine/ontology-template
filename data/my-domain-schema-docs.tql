@@ -1,11 +1,11 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
-# upstream-tag: v1.0.1
-# upstream-commit: b4953fdfaf727a9a5ad299d540381d93896d9011
+# upstream-tag: v2.0.0
+# upstream-commit: 54ee141f8e93d36d8c40c5807ee06f5a449435f1
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
-# manifest: manifests/my-domain-v1.0.1.package-manifest.json
+# manifest: manifests/my-domain-v2.0.0.package-manifest.json
 # generator: hand-authored-package-bootstrap/0.1.0
 put $module isa SchemaModule,
   has moduleKey "my-domain",

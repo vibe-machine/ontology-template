@@ -1,11 +1,11 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
-# upstream-tag: v1.0.1
-# upstream-commit: b4953fdfaf727a9a5ad299d540381d93896d9011
+# upstream-tag: v2.0.0
+# upstream-commit: 54ee141f8e93d36d8c40c5807ee06f5a449435f1
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
-# manifest: manifests/my-domain-v1.0.1.package-manifest.json
+# manifest: manifests/my-domain-v2.0.0.package-manifest.json
 # generator: hand-authored-package-bootstrap/0.1.0
 define
 
@@ -29,11 +29,31 @@ attribute deprecated, value boolean;
 attribute moduleKey, value string;
 attribute moduleName, value string;
 attribute moduleKind, value string;
+attribute viewKey, value string;
+attribute viewName, value string;
+attribute viewDescription, value string;
+attribute viewOrder, value integer;
+attribute groupKey, value string;
+attribute groupName, value string;
+attribute groupDescription, value string;
+attribute groupOrder, value integer;
 
 entity SchemaModule,
     owns moduleKey @key,
     owns moduleName,
     owns moduleKind;
+
+entity SchemaView,
+    owns viewKey @key,
+    owns viewName,
+    owns viewDescription @card(0..1),
+    owns viewOrder @card(0..1);
+
+entity SchemaGroup,
+    owns groupKey @key,
+    owns groupName,
+    owns groupDescription @card(0..1),
+    owns groupOrder @card(0..1);
 
 entity SchemaResource,
     owns docKey @key,
@@ -42,18 +62,30 @@ entity SchemaResource,
     owns kind,
     owns prefLabel,
     owns definition,
-    owns scopeNote,
-    owns example,
-    owns editorialNote,
-    owns altLabel,
-    owns historyNote,
-    owns seeAlso,
-    owns domainIncludes,
+    owns scopeNote @card(0..),
+    owns example @card(0..),
+    owns editorialNote @card(0..),
+    owns altLabel @card(0..),
+    owns historyNote @card(0..),
+    owns seeAlso @card(0..),
+    owns domainIncludes @card(0..),
     owns deprecated @card(0..1);
 
 relation inModule,
     relates resource,
     relates module;
 
+relation groupInView,
+    relates group,
+    relates view;
+
+relation resourceInGroup,
+    relates resource,
+    relates group;
+
 SchemaResource plays inModule:resource;
 SchemaModule plays inModule:module;
+SchemaGroup plays groupInView:group;
+SchemaView plays groupInView:view;
+SchemaResource plays resourceInGroup:resource;
+SchemaGroup plays resourceInGroup:group;
