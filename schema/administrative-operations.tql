@@ -1,7 +1,7 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
 # upstream-tag: v2.0.0
-# upstream-commit: 54ee141f8e93d36d8c40c5807ee06f5a449435f1
+# upstream-commit: e91d442e3e07429474fd98f819f47f34b29e7011
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
@@ -18,7 +18,7 @@ entity OntologyModuleInstallation sub Event,
     plays installationOfOntologyModuleVersion:installation;
 
 relation installationOfOntologyModuleVersion sub isBasedOn,
-    relates installation as isBasedOnSubject,
-    relates version as isBasedOnObject;
+    relates installation as derivedThing,
+    relates version as basis;
 
 OntologyModuleVersion plays installationOfOntologyModuleVersion:version;

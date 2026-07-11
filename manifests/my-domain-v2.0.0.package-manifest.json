@@ -8,11 +8,11 @@
   "upstream": {
     "repoUrl": "https://github.com/your-org/ontology-my-domain",
     "tag": "v2.0.0",
-    "commit": "54ee141f8e93d36d8c40c5807ee06f5a449435f1",
+    "commit": "e91d442e3e07429474fd98f819f47f34b29e7011",
     "sourceArtifacts": [
       {
         "path": "package.json",
-        "sha256": "c3dbc02b5bc18125bda8fab922a4228fd3ff938ce3f300981dd3ad20e0276e04"
+        "sha256": "480884219ac94535ad112e65275b73e4556d6c730fa8219201e7e5c1bb5fb35f"
       },
       {
         "path": "schema/myDomain.tql",
@@ -23,28 +23,28 @@
   "generator": {
     "name": "hand-authored-package-bootstrap",
     "version": "0.1.0",
-    "generatedAt": "2026-03-28T14:03:46Z"
+    "generatedAt": "2026-07-11T18:07:55Z"
   },
   "artifacts": [
     {
       "kind": "meta-schema",
       "path": "schema/self-describing-schema.tql",
-      "sha256": "42b35203f181c438e640fe140b84f6feb88d2cae97f2c563d8c177b7ec7623a8"
+      "sha256": "6d15750a40108467c1b674449f779a318b438d1a698353951bb974af6b594d7b"
     },
     {
       "kind": "provenance-schema",
       "path": "schema/package-provenance.tql",
-      "sha256": "73f05400c11e6b02970e10a1d7a027ba3e158318422ba4742bffeff43139b8fd"
+      "sha256": "eee4b98f20b3a4fb362aa32e22b32a510a58a688d0beb9330799508b42845e65"
     },
     {
       "kind": "administrative-schema",
       "path": "schema/administrative-operations.tql",
-      "sha256": "ab378fd7caf4d6d84f656e0512764515d9dfe98064179b35c8993577bef9dd78"
+      "sha256": "9ce210958d05c277031e30fbd85faf36fa0e7dbd028ac75f812adebcf018b802"
     },
     {
       "kind": "documentation",
       "path": "data/my-domain-schema-docs.tql",
-      "sha256": "943dfce470b6ed0edb17801cbee0647319300e6045ed8d443f120696bf6d4e10"
+      "sha256": "25aa81d8c498f122e9cdabe0c4435d8c8f2abdafe55e8ec680fa38df85859e31"
     },
     {
       "kind": "manifest-schema",
@@ -54,7 +54,7 @@
     {
       "kind": "provenance-seeds",
       "path": "data/my-domain-provenance.tql",
-      "sha256": "9789efbdaa28fc431516d3985a98134a2c2dd20ae6f86a578bf7005269b0a7f0"
+      "sha256": "e0a59bbc81f49157842b77e8ea2fb94262ceaa2ca24a711927abfd4a5136240a"
     }
   ]
 }

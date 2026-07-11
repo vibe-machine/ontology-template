@@ -1,7 +1,7 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
 # upstream-tag: v2.0.0
-# upstream-commit: 54ee141f8e93d36d8c40c5807ee06f5a449435f1
+# upstream-commit: e91d442e3e07429474fd98f819f47f34b29e7011
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
@@ -53,13 +53,13 @@ entity GeneratedArtifactRecord sub SchemaMetaData,
     plays generatedArtifactForOntologyModuleVersion:generatedArtifact;
 
 relation ontologyModuleVersionOf sub isBasedOn,
-    relates version as isBasedOnSubject,
-    relates module as isBasedOnObject;
+    relates version as derivedThing,
+    relates module as basis;
 
 relation ontologyModuleVersionBasedOnSourceArtifact sub isBasedOn,
-    relates version as isBasedOnSubject,
-    relates sourceArtifact as isBasedOnObject;
+    relates version as derivedThing,
+    relates sourceArtifact as basis;
 
 relation generatedArtifactForOntologyModuleVersion sub isAbout,
-    relates generatedArtifact as isAboutSubject,
-    relates version as isAboutObject;
+    relates generatedArtifact as content,
+    relates version as subjectMatter;

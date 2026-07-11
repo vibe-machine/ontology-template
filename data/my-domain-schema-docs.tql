@@ -1,7 +1,7 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
 # upstream-tag: v2.0.0
-# upstream-commit: 54ee141f8e93d36d8c40c5807ee06f5a449435f1
+# upstream-commit: e91d442e3e07429474fd98f819f47f34b29e7011
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
@@ -20,3 +20,26 @@ put $r1 isa SchemaResource,
   has prefLabel "MyEntity",
   has definition "Description of MyEntity.";
 put (resource: $r1, module: $module) isa inModule;
+
+# -- BEGIN GENERATED STRUCTURAL METADATA --
+# Generated from authoritative schema definitions. Do not hand-edit this section.
+
+match
+  $struct_left isa SchemaResource, has typeLabel "MyEntity";
+  $struct_right isa SchemaResource, has typeLabel "Thing";
+  not {
+    (subtypeResource: $struct_left, supertypeResource: $struct_right) isa schemaSubTypeOf;
+  };
+insert
+  (subtypeResource: $struct_left, supertypeResource: $struct_right) isa schemaSubTypeOf;
+
+match
+  $struct_left isa SchemaResource, has typeLabel "MyEntity";
+  $struct_right isa SchemaResource, has typeLabel "name";
+  not {
+    (ownerResource: $struct_left, attributeResource: $struct_right) isa schemaOwns;
+  };
+insert
+  (ownerResource: $struct_left, attributeResource: $struct_right) isa schemaOwns;
+
+# -- END GENERATED STRUCTURAL METADATA --

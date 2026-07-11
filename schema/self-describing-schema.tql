@@ -1,7 +1,7 @@
 # Provenance bootstrap
 # upstream-repo: https://github.com/your-org/ontology-my-domain
 # upstream-tag: v2.0.0
-# upstream-commit: 54ee141f8e93d36d8c40c5807ee06f5a449435f1
+# upstream-commit: e91d442e3e07429474fd98f819f47f34b29e7011
 # source-artifacts:
 # - package.json
 # - schema/myDomain.tql
@@ -13,6 +13,8 @@ attribute docKey, value string;
 attribute iri, value string;
 attribute typeLabel, value string;
 attribute kind, value string;
+attribute roleName, value string;
+attribute valueTypeName, value string;
 
 attribute prefLabel, value string;
 attribute definition, value string;
@@ -60,6 +62,8 @@ entity SchemaResource,
     owns iri,
     owns typeLabel,
     owns kind,
+    owns roleName @card(0..1),
+    owns valueTypeName @card(0..1),
     owns prefLabel,
     owns definition,
     owns scopeNote @card(0..),
@@ -83,9 +87,33 @@ relation resourceInGroup,
     relates resource,
     relates group;
 
+relation schemaSubTypeOf,
+    relates subtypeResource,
+    relates supertypeResource;
+
+relation schemaOwns,
+    relates ownerResource,
+    relates attributeResource;
+
+relation schemaPlays,
+    relates playerResource,
+    relates roleResource;
+
+relation schemaRelates,
+    relates relationResource,
+    relates roleResource;
+
 SchemaResource plays inModule:resource;
 SchemaModule plays inModule:module;
 SchemaGroup plays groupInView:group;
 SchemaView plays groupInView:view;
 SchemaResource plays resourceInGroup:resource;
 SchemaGroup plays resourceInGroup:group;
+SchemaResource plays schemaSubTypeOf:subtypeResource;
+SchemaResource plays schemaSubTypeOf:supertypeResource;
+SchemaResource plays schemaOwns:ownerResource;
+SchemaResource plays schemaOwns:attributeResource;
+SchemaResource plays schemaPlays:playerResource;
+SchemaResource plays schemaPlays:roleResource;
+SchemaResource plays schemaRelates:relationResource;
+SchemaResource plays schemaRelates:roleResource;
